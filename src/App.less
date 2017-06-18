@@ -1,0 +1,32 @@
+
+
+
+.search_input {
+  text-align: center;
+}
+
+.search_box_position {
+  @positionTop: 12vh;
+  position: fixed;
+  top: @positionTop;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .logo {
+    height: 310px;
+    margin-bottom: 85%;
+    background-repeat: no-repeat;
+    background-position: 47% 100%;
+    background-image: url(logo.png);
+  }
+  .animationStyleMoveUp {
+    transform: translateY(@positionTop*5);
+    transition: transform 0.3s ease
+  }
+
+  .animationStyleMoveDown {
+    transform: translateY(@positionTop);
+    transition: transform 0.3s ease
+  }
+
+}

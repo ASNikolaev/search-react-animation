@@ -1,0 +1,28 @@
+{
+  "name": "search-react-animation",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "aphrodite": "^1.2.1",
+    "react": "^15.6.1",
+    "react-animations": "^0.1.0",
+    "react-dom": "^15.6.1",
+    "react-motion": "^0.5.0",
+    "semantic-ui-css": "^2.2.10",
+    "semantic-ui-react": "^0.68.5"
+  },
+  "devDependencies": {
+    "node-less-chokidar": "^0.1.0",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "build-css": "node-less-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-less-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
